@@ -43,11 +43,18 @@ button:hover {
 
 input[type="text"],
 input[type="password"] {
-  margin: 1rem;
   border-radius: 4rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
   padding: 5px 25px;
   overflow: hidden;
   text-align: center;
+}
+
+select {
+  margin-left: 1rem;
+  border-radius: 10px;
+  padding: 5px 15px;
 }
 
 input[type="text"]:focus,
@@ -84,4 +91,8 @@ button a {
   border: 1px solid rgba(0, 0, 0, 0.3);
   width: 15rem;
   padding: 1px 25px 1px 25px;
+}
+
+.form-field {
+  display: flex;
 }
