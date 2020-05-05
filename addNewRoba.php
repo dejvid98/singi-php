@@ -4,21 +4,33 @@
         $magacinQuery = $pdo->query('SELECT * from magacin');
 
     if($_POST){
-        echo $_POST['magacin'];
         // echo 1;
+        
         // echo $_POST['magacin'];
+
         // $magacinNaziv = $_POST['magacin'];
+
         // $findMagacinQuery = 'SELECT * FROM magacin where naziv=:naziv';
+
         // $findMagacinStatement = $pdo->prepare($findMagacinQuery);
+
         // $findMagacinStatement->execute(['naziv'=> $magacinNaziv]);
+
         // $magacinResult = $findMagacinStatement->fetch();
+
         // var_dump($magacinResult);
+    
         // PHASE 2 ---------------------------------------------------------------------------
-        $magacin = 8;
+        $magacin = $_POST['magacin'];
+
         $naziv = $_POST['naziv'];
+
         $kolicina = $_POST['kolicina'];
+
         $insertRobaQuery = 'INSERT INTO roba (magacin_id, naziv, kolicina) values(:magacin,:naziv,:kolicina)';
+
         $insertRobaStatment = $pdo->prepare($insertRobaQuery);
+
         $insertRobaStatment->execute(['magacin'=>$magacin,'naziv'=>$naziv,'kolicina'=>$kolicina]);
     }
 ?>

@@ -1,7 +1,9 @@
 <?php
     $pdo = new PDO("mysql:host=localhost;dbname=php1","root");
+
     $magacinQuery =  $pdo->query('SELECT * from magacin');
-    
+
+    $arr = $magacinQuery->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -19,13 +21,21 @@
         <button>
          <a href='addNewMagacin.php'>Add New Magacin</a>
         </button>
-        <div class='magacini-lista'>
+        <!-- <div class='magacini-lista'>
             <?php while($row = $magacinQuery->fetch(PDO::FETCH_ASSOC)): ?>
                 <div class='magacin-wrapper'>
                     <p>Naziv : <?=$row['naziv'] ?></p>
                     <p>Lokacija : <?=$row['lokacija'] ?></p>
                 </div>
             <?php endwhile ?>
+        </div> -->
+        <div class='magacini-lista'>
+            <?php foreach($arr as $item): ?>
+                <div class='magacin-wrapper'>
+                    <p>Naziv : <?=$item['naziv'] ?></p>
+                    <p>Lokacija : <?=$item['lokacija'] ?></p>
+                </div>
+            <?php endforeach ?>
         </div>
     </div>
 </body>

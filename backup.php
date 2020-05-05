@@ -5,9 +5,13 @@
 
     if($_POST){
         $findMagacinQuery = 'SELECT * from magacin where naziv=:nazivMag';
+
         $findMagacinStatement = $pdo->prepare($findMagacinQuery);
+
         $findMagacinStatement->execute(['nazivMag'=>'Maxi']);
+
         $result = $findMagacinStatement->fetch();
+
         $magacin = $result['id'];
 
         $naziv = $_POST['naziv'];
