@@ -1,21 +1,19 @@
 <?php
-    if($_GET){
+    if($_POST){
         $pdo = new PDO("mysql:host=localhost;dbname=ispit","root");
 
-        $jmbg = $_GET['jmbg'];
+        $stanje = $_POST['stanje'];
 
-        $ime = $_GET['ime'];
+        $id = $_POST['id'];
 
-        $prezime = $_GET['prezime'];
+        $jmbg = $_POST['jmbg'];
 
-        $adresa = $_GET['adresa'];
-
-        $query = 'UPDATE vlasnik SET jmbg=:jmbg,ime=:ime,prezime=:prezime,adresa=:adresa WHERE jmbg=:id';
+        $query = 'UPDATE racun SET stanje=:stanje WHERE id=:id';
 
         $stmt= $pdo->prepare($query);
 
-        $stmt->execute(['jmbg' => $jmbg, 'ime' => $ime,'prezime' => $prezime, 'adresa' => $adresa,'id'=>$jmbg]);
+        $stmt->execute(['id' => $id, 'stanje' => $stanje]);
 
-        header("Location: index.php");
+        header("Location: accounts.php?id=".$jmbg);
     }
 ?>

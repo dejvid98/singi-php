@@ -50,7 +50,7 @@
                     <td><?=$item['id'] ?></td>
                     <td><?=$item['stanje'] ?></td>
                     <td><a href='deleteAccount.php?id=<?php echo $item['id']?>&jmbg=<?php echo $item['vlasnik_jmbg']?>'>Delete</a></td>
-                    <td><a>Change</a></td>
+                    <td><a href='updateAccount2.php?id=<?php echo $item['id']?>&jmbg=<?php echo $item['vlasnik_jmbg']?>'>Change</a></td>
                 </tr>
             <?php endforeach ?>                
         </table>
