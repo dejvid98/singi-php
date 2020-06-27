@@ -1,0 +1,133 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: #ededed;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #364f6b;
+  width: 100vw;
+}
+
+h1 {
+  color: #f0f0f0;
+  letter-spacing: 2px;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button {
+  display: block;
+  position: relative;
+  float: left;
+  margin: 1rem;
+  padding: 0px 30px 0px 30px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  border-radius: 3rem;
+  transition: all 0.2s;
+  background-color: #fc5185;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  filter: brightness(0.9);
+  transform: translateY(-3px);
+  box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  padding: 10px 25px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 15px;
+}
+
+input:focus {
+  border: 2px solid #4285f4;
+}
+
+button {
+  position: relative;
+  float: left;
+  margin: 1rem;
+  width: 10rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  line-height: 2rem;
+  border-radius: 3rem;
+  transition: all 0.2s;
+  background-color: #fc5185;
+  border: 1px solid #fc5185;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  filter: brightness(0.9);
+  transform: translateY(-3px);
+  box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  text-align: center;
+  color: #777;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #fff;
+}
+
+th {
+  padding-left: 6rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-right: 6rem;
+  text-align: center;
+  background-color: #364f6b;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+  padding-right: 5.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 5.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #364f6b;
+  box-shadow: 10px 10px 17px 4px rgba(0, 0, 0, 0.3);
+}
